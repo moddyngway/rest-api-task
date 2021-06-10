@@ -96,4 +96,4 @@ Please make sure to update tests as appropriate.
 
 
 ## Roadmap
-In the near future i want to add visuals to my project with Bootstrap5. After that i wanted to test my site and deploy my project.
+In the near future i want to add visuals to my project with Bootstrap5. After that i will test my site and deploy my project.
