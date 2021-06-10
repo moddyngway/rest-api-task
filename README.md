@@ -6,8 +6,9 @@ I used Django and Django, Restframework libraries in order to add rest api to my
 ## Models
 
 I have 4 models, 3 of them are part of main model - Course.
+
 Other models are Category, Branch and Contact (Contact has hardcoded choices for type field (1-PHONE, 2-FACEBOOK, 3-EMAIL)).
-Models are primitive and easy to understand/
+Models are primitive and easy to understand:
 
 ```python
 class Category(models.Model):
