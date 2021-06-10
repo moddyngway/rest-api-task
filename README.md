@@ -48,8 +48,11 @@ class Course(models.Model):
 ## Usage
 
 Requests:
+
 /courses
+
 GET retrieves all the courses in database
+
 POST adds a course into DB
 
 example of json file to make POST request
@@ -80,7 +83,9 @@ example of json file to make POST request
 ```
 
 /courses/{course_id}
+
 GET retrieves a course by course_id with JSON
+
 DELETE deletes a course by course ID
 
 
