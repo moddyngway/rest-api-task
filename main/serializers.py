@@ -31,7 +31,9 @@ class CoursesSerializer(serializers.ModelSerializer):
         course = Course.objects.create(**validated_data)
 
         for contact in contacts:
-            Contact.objects.create(course=course, **contact)
+            a, created = Contact.objects.get_or_create(course=course, **contact)
+            course.contacts.add(a)
         for branch in branches:
-            Branch.objects.create(course=course, **branch)
+            a, created = Branch.objects.get_or_create(course=course, **branch)
+            course.branches.add(a)
         return course
