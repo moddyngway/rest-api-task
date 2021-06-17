@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Course
 from .serializers import CoursesSerializer
+import requests
 
 
 class CourseDetailAPIView(APIView):
@@ -34,3 +35,9 @@ class CourseAPIView(APIView):
         if serializer.is_valid(raise_exception=True):
             course_saved = serializer.save()
         return Response({"success": "Course '{}' created successfully".format(course_saved.title)})
+
+
+def index(request):
+    r = requests.get('http://httpbin.org/status/418')
+    print(r.text)
+    return HttpResponse('<pre>' + r.text + '</pre>')
